@@ -5,6 +5,11 @@ input.onButtonPressed(Button.A, function () {
         time += 1
         basic.showNumber(time)
     }
+    while (!(input.buttonIsPressed(Button.A))) {
+        basic.pause(1000)
+        time += -1
+        basic.showNumber(time)
+    }
 })
 input.onButtonPressed(Button.AB, function () {
     time = 0
